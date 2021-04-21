@@ -1,0 +1,60 @@
+.helptext {
+    
+}
+
+.navbar > ul{
+    list-style-type: None;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+.navbar > ul > li {
+    
+    float:left;
+    
+}
+.navbar > ul > li > a {
+    display: block;
+    padding:8px;
+    background-color:rgb(230,230,230);
+}
+
+.sub_name{
+    color:red;
+}
+.username {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+
+}
+
+.bubble {
+    border: 1.5px solid rgb(218, 218, 218);
+    border-radius: 4px;
+    background-color: white;
+    padding:1em;
+    text-decoration: none;
+    
+    margin:auto;
+    width:50%;
+    
+}
+.bubble:hover{
+    border: 1.5px solid rgb(137, 137, 137);
+}
+.bubble a {
+    text-decoration: none;
+    color:black;
+}
+
+.reply {
+    @extend .bubble{
+        color:blue;
+    }
+    
+}
+
+html, body {
+    background-color: rgb(218, 224, 230);
+}
