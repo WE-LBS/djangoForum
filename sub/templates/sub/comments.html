@@ -1,0 +1,22 @@
+{% extends "sub/base.html" %}
+
+{% block content %}
+<div class="bubble">
+    <h1>{{post.title}}</h1>
+    <p>Created by: <a href="/u/{{post.author.name}}">{{post.author.name}}</a></p>
+    <p>{{post.description}}</p>
+</div>
+
+{% for c in comments%}
+
+
+    <div class="bubble">
+        
+        <p><a href="/u/{{c.author.name}}">{{c.author.name}}</a> says:</p>
+        <p>{{c.description}}</p>
+
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

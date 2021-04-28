@@ -5,10 +5,27 @@
 <h1>{{ category.name }}</h1>
 
 
-{% for post in posts %}
 
-<a href="" class="bubble">{{  post.title  }}</a>
 
-{% endfor %}
+{% if posts %}
+
+
+{% for p in posts%}
+
+
+    <div class="bubble">
+        
+        <h1><a href="comments/{{p.id}}">{{p.title}}</a></h1>
+        <p>Posted by <a href="/u/{{p.author.name}}">u/{{p.author.name}}</a></p>
+
+    </div>
+    {% endfor %}
+{% else %}
+<p>There are no posts here yet.</p>
+    <p>Be the first to <a href="{{request.path}}create">create a post in r/{{subreddit.name}}</a>!</p>
+{% endif %}
+
+</div>
+
 
 {% endblock %}
