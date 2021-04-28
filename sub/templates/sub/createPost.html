@@ -1,0 +1,10 @@
+{% extends "sub/base.html" %}
+
+{% block content %}
+<form action="/c/{{category}}/" method="POST">
+    {% csrf_token%}
+    {{form}}
+    <button type="submit" name="save">Create Post</button>
+</form>
+
+{% endblock %}
